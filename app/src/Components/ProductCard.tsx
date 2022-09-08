@@ -121,12 +121,12 @@ const ProductCard = ({ product }: Props) => {
 
         {/* <Divider sx={{ borderStyle: 'dashed' }} /> */}
 
-        <Stack direction="row" spacing={2} sx={{ mt: 5 }}>
+        {/* <Stack direction="row" spacing={2} sx={{ mt: 5 }}>
           <Button
             // fullWidth
             // disabled={}
             size="small"
-            color="warning"
+            // color="warning"
             variant="contained"
             // startIcon={<Iconify icon={'ic:round-add-shopping-cart'} />}
             // onClick={handleAddCart}
@@ -138,7 +138,7 @@ const ProductCard = ({ product }: Props) => {
           <Button fullWidth size="small" type="submit" variant="contained">
             Buy Now
           </Button>
-        </Stack>
+        </Stack> */}
       </Stack>
     </Card>
   );
