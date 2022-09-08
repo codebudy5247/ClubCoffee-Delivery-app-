@@ -1,13 +1,24 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ProductCard from "./ProductCard";
 import SkeletonProductItem from "./SkeletonProductItem";
 import { Product } from "../@types/Product";
 
 type Props = {
-  products: any;
+  products: Product[];
   loading: boolean;
+  error: string;
 };
-const ProductList = ({ products, loading }: Props) => {
+const ProductList = ({ products, loading, error }: Props) => {
+  if (error) {
+    return (
+      <Typography
+        variant="h4"
+        sx={{ fontWeight: "bold", color: "red", textAllign: "center" }}
+      >
+        {error}
+      </Typography>
+    );
+  }
   return (
     <Box
       sx={{

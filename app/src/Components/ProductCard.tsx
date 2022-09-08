@@ -12,7 +12,7 @@ import {
 import image from "../Images/1.jpg";
 import Iconify from "../Components/Iconify";
 type Props = {
-  product: any;
+  product: Product;
 };
 
 type IncrementerProps = {
@@ -72,7 +72,7 @@ function Incrementer({
 }
 
 const ProductCard = ({ product }: Props) => {
-  const { title, price } = product;
+  const { name, prices } = product;
   return (
     <Card>
       <Box sx={{ position: "relative" }}>
@@ -88,11 +88,11 @@ const ProductCard = ({ product }: Props) => {
         >
           <Box>
             <Typography variant="subtitle2" noWrap>
-              {title}
+              {name}
             </Typography>
           </Box>
           <Box>
-            <Typography variant="subtitle1">{price}</Typography>
+            <Typography variant="subtitle1">{prices}</Typography>
           </Box>
         </Box>
 
